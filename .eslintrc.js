@@ -5,7 +5,8 @@ module.exports = {
     },
     "extends": [
         "plugin:react/recommended",
-        "standard-with-typescript"
+        "standard-with-typescript",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
     ],
@@ -14,12 +15,14 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "i18next"
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
         "no-unused-vars": "warn",
         "@typescript-eslint/explicit-module-boundary-types": ["off"],
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "i18next/no-literal-string": ["error", { markupOnly: true }]
     }
 }
